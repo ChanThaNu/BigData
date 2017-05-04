@@ -1,32 +1,19 @@
-film = LOAD '/user/hduser/project4/input/film.csv'
+film = LOAD 'film.csv'
        USING PigStorage(',')
-       AS (film_id: int,
-           title: chararray,
-           description: chararray,
-           release_year: int,
-           language: int,
-           rental_duration: int,
-           rental_rate: double,
-           length: int,
-           relacement_cost: double,
-           rating: chararray,
-           special_features: chararray);
+       AS (film_id: int,title: chararray,description: chararray,release_year: int,language: int,rental_duration: int,rental_rate: double,length: int,relacement_cost: double,rating: chararray,special_features: chararray);
 
-film_actor = LOAD '/user/hduser/project4/input/film_actor.csv'
+film_actor = LOAD 'film_actor.csv'
+       USING PigStorage(',')
+       AS (actor_id: int,film_id: int);
+
+actor = LOAD 'actor.csv'
        USING PigStorage(',')
        AS (actor_id: int,
-       film_id: int);
+           first_name: chararray,last_name: chararray);
 
-actor = LOAD '/user/hduser/project4/input/actor.csv'
+language = LOAD 'language.csv'
        USING PigStorage(',')
-       AS (actor_id: int,
-           first_name: chararray,
-           last_name: chararray);
-
-language = LOAD '/user/hduser/project4/input/language.csv'
-       USING PigStorage(',')
-       AS (language_id: int,
-           name: chararray);
+       AS (language_id: int,name: chararray);
 
 table1 = JOIN film_actor BY film_id, film BY film_id;
 table2 = JOIN table1 BY film::language, language BY language_id;
