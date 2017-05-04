@@ -1,7 +1,7 @@
 # BigData Project4
 In this project, three team members are grouped by
-Myat Oo (Team Leader)
-Zijian Zhang
+Myat Oo (Team Leader),
+Zijian Zhang, 
 Mohammad Islam
 
 Before this project,
