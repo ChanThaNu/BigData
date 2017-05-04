@@ -1,0 +1,6 @@
+Download the latest file pig from website
+On hduser, tar -xvf pig-0.16.0.tar
+ls -alh 
+nano .bashrc (:/home/hduser/pig-0.16.0/bin)
+. ./.bashrc
+env |grep PATH
