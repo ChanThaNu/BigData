@@ -1,0 +1,129 @@
+=====================================================================
+(a) What is the average length of films in each category?
+List the results in alphabetic order of categories.
+
+
+Category	Avg. Length Of Films
+=====================================
+Action	 		111.61
+Animation	 	111.02
+Children	 	109.80
+Classics	 	111.67
+Comedy	 		115.83
+Documentary	 	108.75
+Drama	 		120.84
+Family	 		114.78
+Foreign	 		121.70
+Games	 		127.84
+Horror	 		112.48
+Music	 		113.65
+New	 		111.13
+Sci-Fi	 		108.20
+Sports	 		128.20
+Travel	 		113.32
+
+
+
+
+
+
+
+========================================================================
+(b) Which categories have the longest and shortest average film lengths?
+
+NAME	TO_CHAR(AVG(LENGTH),'999.99')
+=====================================
+Sports	 128.20
+Sci-Fi	 108.20
+
+
+
+
+
+
+=====================================================================
+(c) Which customers have rented action but not comedy or classic movies?
+
+LAST_NAME
+=========
+BONE
+BURK
+DIXON
+FERNANDEZ
+FORMAN
+FOWLER
+FRALEY
+GARDNER
+LAWTON
+MAHAN
+MILNER
+REID
+SHELLEY
+THOMPSON
+WAGNER
+WASHINGTON
+WILLIAMSON
+
+
+
+
+
+
+=====================================================================
+(d) Which actor has appeared in the most English-language movies?
+
+LAST_NAME	ACTOR_ID	COUNT(*)
+========================================
+DEGENERES	107		42
+
+
+
+
+
+
+
+
+=====================================================================
+(e) How many distinct movies were rented for exactly 10 days from the 
+store where Mike works?
+
+COUNT(DISTINCT(FILM_ID))
+========================
+61
+    
+
+
+ 
+
+
+
+
+
+
+
+=====================================================================
+(f) Alphabetically list actors who appeared in the movie with the largest 
+cast of actors.
+
+FIRST_NAME	LAST_NAME
+=========================
+JULIA		BARRYMORE
+VAL		BOLGER
+SCARLETT	DAMON
+LUCILLE		DEE
+WOODY		HOFFMAN
+MENA		HOPPER
+REESE		KILMER
+CHRISTIAN	NEESON
+JAYNE		NOLTE
+BURT		POSEY
+MENA		TEMPLE
+WALTER		TORN
+FAY		WINSLET
+CAMERON		ZELLWEGER
+JULIA		ZELLWEGER
+
+
+
+
+
